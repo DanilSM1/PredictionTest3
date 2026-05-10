@@ -14,14 +14,7 @@ public class StudentPredictionUI extends JFrame {
 
     // Данные для работы
     private ControlGroups[] controlGroup;
-    private ExpGroup1Sem[] group1Sem;
-    private ExpGroup2Sem[] group2Sem;
-    private ExpGroup3to7Sem[] group3Sem;
-    private ExpGroup4Sem[] group4Sem;
-    private ExpGroup3to7Sem[] group5Sem;
-    private ExpGroup3to7Sem[] group6Sem;
-    private ExpGroup3to7Sem[] group7Sem;
-    private ExpGroup8Sem[] group8Sem;
+    private ExpGroups[] group1Sem, group2Sem, group3Sem, group4Sem, group5Sem, group6Sem, group7Sem, group8Sem;
 
     // Матрицы переходов
     private TransitionMatrix matrix1to2, matrix2to3, matrix3to4, matrix4to5, matrix5to6, matrix6to7, matrix7to8;
@@ -426,49 +419,49 @@ public class StudentPredictionUI extends JFrame {
                             logMessage("Загружено " + controlGroup.length + " записей контрольной группы");
                             break;
                         case "1Sem":
-                            group1Sem = ExpGroup1Sem.parseExpGroup1Sem(filePath);
+                            group1Sem = ExpGroups.parseExpGroup(filePath);
                             group1SemLabel.setText(new File(filePath).getName());
                             group1SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group1Sem.length + " записей 1 семестра");
                             break;
                         case "2Sem":
-                            group2Sem = ExpGroup2Sem.parseExpGroup2Sem(filePath);
+                            group2Sem = ExpGroups.parseExpGroup(filePath);
                             group2SemLabel.setText(new File(filePath).getName());
                             group2SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group2Sem.length + " записей 2 семестра");
                             break;
                         case "3Sem":
-                            group3Sem = ExpGroup3to7Sem.parseExpGroup3to7Sem(filePath);
+                            group3Sem = ExpGroups.parseExpGroup(filePath);
                             group3SemLabel.setText(new File(filePath).getName());
                             group3SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group3Sem.length + " записей 3 семестра");
                             break;
                         case "4Sem":
-                            group4Sem = ExpGroup4Sem.parseExpGroup4Sem(filePath);
+                            group4Sem = ExpGroups.parseExpGroup(filePath);
                             group4SemLabel.setText(new File(filePath).getName());
                             group4SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group4Sem.length + " записей 4 семестра");
                             break;
                         case "5Sem":
-                            group5Sem = ExpGroup3to7Sem.parseExpGroup3to7Sem(filePath);
+                            group5Sem = ExpGroups.parseExpGroup(filePath);
                             group5SemLabel.setText(new File(filePath).getName());
                             group5SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group5Sem.length + " записей 5 семестра");
                             break;
                         case "6Sem":
-                            group6Sem = ExpGroup3to7Sem.parseExpGroup3to7Sem(filePath);
+                            group6Sem = ExpGroups.parseExpGroup(filePath);
                             group6SemLabel.setText(new File(filePath).getName());
                             group6SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group6Sem.length + " записей 6 семестра");
                             break;
                         case "7Sem":
-                            group7Sem = ExpGroup3to7Sem.parseExpGroup3to7Sem(filePath);
+                            group7Sem = ExpGroups.parseExpGroup(filePath);
                             group7SemLabel.setText(new File(filePath).getName());
                             group7SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group7Sem.length + " записей 7 семестра");
                             break;
                         case "8Sem":
-                            group8Sem = ExpGroup8Sem.parseExpGroup8Sem(filePath);
+                            group8Sem = ExpGroups.parseExpGroup(filePath);
                             group8SemLabel.setText(new File(filePath).getName());
                             group8SemLabel.setForeground(Color.GREEN);
                             logMessage("Загружено " + group8Sem.length + " записей 8 семестра");
